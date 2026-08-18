@@ -17,8 +17,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Instalar dependencias sin bloqueo
-        run: npm install --force --no-package-lock
+      - name: Instalar dependencias limpias
+         run: npm install --legacy-peer-deps --force
+
 
       - name: Compilar proyecto web
         run: npm run build
