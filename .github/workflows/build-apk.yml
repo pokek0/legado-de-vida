@@ -16,10 +16,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
-      - name: Instalar dependencias limpias
-        run: npm install --force
+      - name: Instalar dependencias sin bloqueo
+        run: npm install --force --no-package-lock
 
       - name: Compilar proyecto web
         run: npm run build
