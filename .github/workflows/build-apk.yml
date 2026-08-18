@@ -19,7 +19,7 @@ jobs:
           cache: 'npm'
 
       - name: Instalar dependencias limpias
-        run: npm install --legacy-peer-deps
+        run: npm install --force
 
       - name: Compilar proyecto web
         run: npm run build
